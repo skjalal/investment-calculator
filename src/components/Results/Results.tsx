@@ -1,10 +1,10 @@
 import React from 'react';
-import type { ResultType } from '../../util/type-utils';
+import type { ResultType, Result } from '../../util/type-utils';
 import { calculateInvestmentResults, formatter } from '../../util/investment';
 import './Results.css';
 
 const Results: React.FC<ResultType> = ({ input }) => {
-  const resultsData = calculateInvestmentResults(input);
+  const resultsData: Result[] = calculateInvestmentResults(input);
   const initialInvestment =
     resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment;
 

@@ -42,6 +42,7 @@ const UserInput: React.FC<UserInputType> = ({ onChange, userInput }) => {
           <label htmlFor="duration">Duration</label>
           <input
             type="number"
+            id="duration"
             name="duration"
             value={userInput.duration}
             required

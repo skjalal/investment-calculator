@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header/Header.tsx';
 import UserInput from './components/UserInput/UserInput.tsx';
 import Results from './components/Results/Results.tsx';
-import type { Investment } from './util/investment.ts';
+import type { Investment } from './util/type-utils.ts';
 import './App.css';
 
 function App() {

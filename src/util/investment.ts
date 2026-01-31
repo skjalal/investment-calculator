@@ -1,13 +1,8 @@
-type Investment = {
-  initialInvestment: number;
-  annualInvestment: number;
-  expectedReturn: number;
-  duration: number;
-};
+import type { Investment, Result } from './type-utils';
 
-const calculateInvestmentResults = (investment: Investment) => {
+const calculateInvestmentResults = (investment: Investment): Result[] => {
   const { initialInvestment, annualInvestment, expectedReturn, duration } = investment;
-  const annualData = [];
+  const annualData: Result[] = [];
   let investmentValue = initialInvestment;
 
   for (let i = 0; i < duration; i++) {
@@ -31,4 +26,4 @@ const formatter = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 });
 
-export { type Investment, calculateInvestmentResults, formatter };
+export { calculateInvestmentResults, formatter };
